@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: #f6f6f6;
+        }
+
+        .stage {
+            width: 100%;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+        .bat,
+        .ball {
+            position: relative;
+
+        }
+
+
+        .ball {
+            transition: transform 0.7s ease-out 0.2s;
+        }
+
+
+        .bat {
+            width: 20%;
+            transition: transform 0.2s ease-in;
+
+        }
+
+        .stage:hover .bat {
+            transform-origin: top right;
+            transform: rotate(-60deg);
+
+
+        }
+
+        .stage:hover .ball {
+            transform: translate(1200px, -400px);
+
+
+        }
+
+
+
+        .ball {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background: url("images/ball2.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            left: 509px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stage">
+        <img class="bat" src="images/bat.png" alt="">
+        <div class="ball"></div>
+    </div>
+
+</body>
+
+</html>
